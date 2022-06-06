@@ -13,7 +13,7 @@ public class HomeController {
 
     @RequestMapping("msg/{name}")
     public String sayHello(@PathVariable String name){
-        return "hello "+name;
+        return "hi "+name;
     }
 
 }

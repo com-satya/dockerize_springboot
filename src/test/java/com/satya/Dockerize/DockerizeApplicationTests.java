@@ -1,16 +1,12 @@
 package com.satya.Dockerize;
-
-
-import org.springframework.boot.test.context.SpringBootTest;
-import static org.junit.Assert.assertTrue;
 import org.junit.Test;
+import static org.junit.Assert.assertTrue;
 
-
-@SpringBootTest
 class DockerizeApplicationTests {
 
 	@Test
-	public void shouldReturnTrue(){
+	public void mustBeTrue(){
 		assertTrue(true);
+
 	}
 }

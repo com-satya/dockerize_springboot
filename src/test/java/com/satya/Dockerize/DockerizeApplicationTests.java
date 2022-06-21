@@ -11,6 +11,6 @@ class DockerizeApplicationTests {
 
 	@Test
 	public void shouldReturnTrue(){
-		assertTrue(true);
+		assertTrue(false);
 	}
 }

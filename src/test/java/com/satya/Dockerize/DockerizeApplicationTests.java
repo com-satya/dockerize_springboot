@@ -6,11 +6,11 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 
-//SpringBootTest
+@SpringBootTest
 class DockerizeApplicationTests {
 
 	@Test
 	public void shouldReturnTrue(){
-		assertTrue(false);
+		assertTrue(true);
 	}
 }

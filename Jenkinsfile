@@ -1,5 +1,8 @@
 pipeline{
     agent any
+	environment{
+		dockerhub=credentials('docker-pwd')
+	}
     stages{
         stage('Code checkout'){
             steps{
@@ -28,9 +31,8 @@ pipeline{
         }
         stage('Push docker images'){
             steps{
-                withCredentials([string(credentialsId: 'docker-pwd', variable: 'docker-pwd')]) {
-                 sh 'docker login -u satyainv459 -p ${docker-pwd}'
-                 sh 'docker push satyainv459/docker-jenkins-integration-sample:1.0 '
+                sh 'echo $dockerhub_PSW | docker login -u $dockerhub_USR --password-stdin'
+                 sh 'docker push satyainv459/springboot-docker:1.0 '
              }
             }
         }

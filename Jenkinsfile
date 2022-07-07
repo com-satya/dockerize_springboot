@@ -34,7 +34,7 @@ pipeline{
                 sh 'echo $dockerhub_PSW | docker login -u $dockerhub_USR --password-stdin'
                  sh 'docker push satyainv459/springboot-docker:1.0 '
              }
-            }
+            
         }
     }
 }

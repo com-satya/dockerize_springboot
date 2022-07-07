@@ -28,7 +28,7 @@ pipeline{
         }
         stage('Push docker images'){
             steps{
-                withCredentials([string(credentialsId: 'github-id', variable: 'docker-pwd')]) {
+                withCredentials([string(credentialsId: 'docker-pwd', variable: 'docker-pwd')]) {
                  sh 'docker login -u satyainv459 -p ${docker-pwd}'
                  sh 'docker push satyainv459/docker-jenkins-integration-sample:1.0 '
              }

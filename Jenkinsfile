@@ -25,7 +25,7 @@ pipeline{
         stage('Build docker image'){
             steps{
                 script{
-                    sh 'docker build -t satyainv459/docker-jenkins-integration-sample:1.0 .'
+                    sh 'docker build -t satyainv459/springboot-docker:1.0 .'
                 }
             }
         }

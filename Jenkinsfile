@@ -13,7 +13,7 @@ pipeline{
         stage('Build maven'){
             steps{
                 script{
-                    withMaven(maven: 'maven-scanner') {
+                    withMaven(maven: 'Maven3') {
                      sh 'java --version'        
                      sh 'mvn --version'
                      sh 'mvn clean compile install'
